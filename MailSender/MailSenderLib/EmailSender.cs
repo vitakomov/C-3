@@ -17,18 +17,15 @@ namespace MailSenderLib
 		[Obsolete("Устарело, используй что-то другое")]
 		public void Send(string strUser, string strPass)
 	    {
-			const string from = "user@yandex.ru";
-		    const string to = "user@gmail.com";
-
-		    const string server = "smtp.yandex.ru";
+			
 
 		    var user = strUser;
 		    var pass = strPass;
 
 		    try
 		    {
-			    using (var message = new MailMessage(from, to, "Test message", "Test messae body"))
-			    using (var client = new SmtpClient(server) { EnableSsl = true, Credentials = new NetworkCredential(user, pass) })
+			    using (var message = new MailMessage(WpfTestMailSender.from, WpfTestMailSender.to, "Test message", "Test message body"))
+			    using (var client = new SmtpClient(WpfTestMailSender.server) { EnableSsl = true, Credentials = new NetworkCredential(user, pass) })
 			    {
 				    client.Send(message);
 			    }
