@@ -1,48 +1,51 @@
 ﻿using System;
-using System.Net;
+using System.Linq;
 using System.Windows;
-using System.Net.Mail;
-using MailSenderLib;
 
 namespace MailSender
 {
-	partial class MainWindow : Window
-    {
-		internal MainWindow() => InitializeComponent();
-		protected 
-	    void Button_Click(object sender, RoutedEventArgs e)
-	    {
-		    try
-		    {
-			    var send = new EmailSender();
-			    send.Send(UserNameTextBox.Text, PasswordEdit.Password);
-		    }
-		    catch (Exception exception)
-		    {
-			    //MessageBox.Show(error.Message, "При отправке сообщения возникла ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-			    var dlg = new MessageSendCompletedDlg(exception.StackTrace);
-			    dlg.ShowDialog();
-		    }
-
-		    MyClass<int>.Test = 4;
-		    MyClass<string>.Test = 4.ToString();
-	    }
-	}
-
-	public class A {}
-
-	internal class B : A // не может иметь более высокий уровень доступа чем базовый класс
+	public partial class MainWindow : Window
 	{
-		public void NameMethod()
+		public MainWindow()
 		{
-			
+			InitializeComponent();
+
+			object a = 1;
+			object b = 1;
+
+			Console.WriteLine(a==b);
+			Console.WriteLine(a.Equals(b));
 		}
-	} 
+
+		private void TabSwitcherControl_OnBack(object sender, RoutedEventArgs e)
+		{
+			if (MainTabControl.SelectedIndex == 0) return;
+			MainTabControl.SelectedIndex--;
+		}
+
+		private void TabSwitcherControl_OnForward(object sender, RoutedEventArgs e)
+		{
+			if (MainTabControl.SelectedIndex == MainTabControl.Items.Count - 1) return;
+			MainTabControl.SelectedIndex++;
+		}
+
+		private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+		{
+			string strLogin = cbSenderSelect.Text;
+			string strPassword = cbSenderSelect.SelectedValue.ToString();
+			if (string.IsNullOrEmpty(strLogin))
+			{
+				MessageBox.Show("Выберите отправителя");
+				return;
+			}
+			if (string.IsNullOrEmpty(strPassword))
+			{
+				MessageBox.Show("Укажите пароль отправителя");
+				return;
+			}
+			EmailSendServiceClass emailSender = new EmailSendServiceClass(strLogin, strPassword);
+			emailSender.SendMails((IQueryable<Emails>)dgEmails.ItemsSource);
+
+		}
+	}
 }
-
-class MyClass <T>
-{
-	public static T Test;
-}
-
-
