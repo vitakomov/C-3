@@ -42,6 +42,10 @@ xmlns:TabSwitcher="clr-namespace:TabSwitcher;assembly=TabSwitcher"
                             </Button>
                         </ToolBar>
                         <ToolBar>
+                            <Label Content="Выбрать smtp-server:"/>
+                            <ComboBox></ComboBox>
+                        </ToolBar>
+                        <ToolBar>
                             <Label>Планировщик:</Label>
                             <Button ToolTip="Удалить отправителя">
                                 <Image Source="src/clock.png" Height="15" Margin="2"/>
