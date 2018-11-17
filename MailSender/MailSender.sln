@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27703.2047
+VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailSender", "MailSender\MailSender.csproj", "{29C7734E-BD29-496B-ACD3-3E3640DEFED6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailSender", "MailSender\MailSender.csproj", "{A502361F-2A09-4D93-BDD0-DD8D73DB72E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabSwitcher", "TabSwitcher\TabSwitcher.csproj", "{8BCE7E9B-C2F7-48D4-A00C-743DA24C544A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabSwitcher", "TabSwitcher\TabSwitcher.csproj", "{9152EEED-E7CC-4ADF-9478-8C881787ACE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animation", "Animation\Animation.csproj", "{8E41A282-530D-49C3-86CE-B444E93D2926}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,19 +15,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{29C7734E-BD29-496B-ACD3-3E3640DEFED6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{29C7734E-BD29-496B-ACD3-3E3640DEFED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{29C7734E-BD29-496B-ACD3-3E3640DEFED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{29C7734E-BD29-496B-ACD3-3E3640DEFED6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8BCE7E9B-C2F7-48D4-A00C-743DA24C544A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8BCE7E9B-C2F7-48D4-A00C-743DA24C544A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8BCE7E9B-C2F7-48D4-A00C-743DA24C544A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8BCE7E9B-C2F7-48D4-A00C-743DA24C544A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A502361F-2A09-4D93-BDD0-DD8D73DB72E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A502361F-2A09-4D93-BDD0-DD8D73DB72E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A502361F-2A09-4D93-BDD0-DD8D73DB72E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A502361F-2A09-4D93-BDD0-DD8D73DB72E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9152EEED-E7CC-4ADF-9478-8C881787ACE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9152EEED-E7CC-4ADF-9478-8C881787ACE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9152EEED-E7CC-4ADF-9478-8C881787ACE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9152EEED-E7CC-4ADF-9478-8C881787ACE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E41A282-530D-49C3-86CE-B444E93D2926}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E41A282-530D-49C3-86CE-B444E93D2926}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E41A282-530D-49C3-86CE-B444E93D2926}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E41A282-530D-49C3-86CE-B444E93D2926}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {CD4E3760-4C84-4DE3-8A93-4FED2B9981B5}
+		SolutionGuid = {399611A7-E3A5-4858-9A4F-FC0C4E260F93}
 	EndGlobalSection
 EndGlobal

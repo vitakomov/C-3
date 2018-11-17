@@ -2,12 +2,11 @@
 
 namespace MailSender
 {
-	internal static class Database
+	public static class DataBase
 	{
-		private static readonly EmailsDataContext _emailsDataContext = new
-			EmailsDataContext();
-		public static IQueryable<Emails> Emails => from mail in
-				_emailsDataContext.Emails
-			select mail;
+		private static EmailsDataContext _emailsDataContext = new EmailsDataContext();
+
+		public static IQueryable<Emails> Emails => from email in _emailsDataContext.Emails select email;
+
 	}
 }

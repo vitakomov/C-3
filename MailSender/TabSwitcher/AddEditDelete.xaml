@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="TabSwitcher.AddEditDelete"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TabSwitcher"
+             mc:Ignorable="d">
+    <WrapPanel>
+        <Button 
+            Name="bAdd"
+            ToolTip="Добавить "
+            Click="bAdd_Click">
+            <Image Source="src/add.png" Height="15" Margin="2"/>
+        </Button>
+        <Button 
+            Name="bEdit"
+            ToolTip="Редактировать "
+            Click="bEdit_Click">
+            <Image Source="src/edit.png" Height="15" Margin="2"/>
+        </Button>
+        <Button 
+            Name="bDelete"
+            ToolTip="Удалить "
+            Click="bDelete_Click">
+            <Image Source="src/remove.png" Height="15" Margin="2"/>
+        </Button>
+    </WrapPanel>
+</UserControl>
